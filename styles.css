@@ -1,0 +1,98 @@
+/* Tracking page styles */
+.tracking-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+.tracking-status {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#map {
+    flex: 2;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-track {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+
+.btn-track.active {
+    background: #f44336;
+}
+
+/* Monitor page styles */
+.monitor-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+.users-list {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.users-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.user-card {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+}
+
+#monitor-map {
+    flex: 2;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .tracking-container,
+    .monitor-container {
+        flex-direction: column;
+    }
+
+    .tracking-status,
+    .users-list {
+        max-width: none;
+    }
+
+    #map,
+    #monitor-map {
+        height: 400px;
+    }
+}
